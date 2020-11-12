@@ -33,7 +33,7 @@ Read in the data.
 
 ```{r}
 homocide_df = 
-  read_csv("data/homicide-data.csv") %>%
+  read_csv("homocide_data/homicide-data.csv") %>%
   mutate(
     city_state = str_c(city, state, sep = "_"),
     resolved = case_when(
@@ -111,14 +111,31 @@ data_1 = read_csv("ldl_data/con_01.csv")
 ```
 
 ```{r}
+data_read = function(df) {
+ 
+  data = read_csv(df)
+
+}
+
+output = vector("list", 20)
+
+for (i in 1:20) {
+  output[[i]] = data_read(path_df$path[[i]])
+  
+}
+```
+
+```{r}
 path_df =
 tibble(
   path = list.files("ldl_data")
   ) %>%
 mutate(
   path = str_c("ldl_data/", path),
-   data = map(............))
+  ldl_data = map(path_df$path, data_read))
+  
 
-read_csv(path_df$path[[1]])
+
+
 ```
 

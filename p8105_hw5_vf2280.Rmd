@@ -132,10 +132,15 @@ tibble(
   ) %>%
 mutate(
   path = str_c("ldl_data/", path),
-  ldl_data = map(path_df$path, data_read))
+  ldl_data = map(path, data_read)) %>%
+  unnest(ldl_data)
   
+```
 
-
-
+```{r}
+path_df %>%
+  mutate(
+    subject_id = path
+  )
 ```
 

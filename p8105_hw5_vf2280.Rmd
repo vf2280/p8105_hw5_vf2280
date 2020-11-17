@@ -373,7 +373,7 @@ tibble(
   ggplot(aes(x = mu, y = avg_of_estimate, color = mu)) +
   geom_point() +
   labs(
-    title = "Average Estimate of Mu Hat vs. the True Value of Mu",
+    title = "Avg. Est. of Mu Hat vs. the True Value of Mu",
     x = "True Mu",
     y = "Average Estimate of Mu Hat "
   ) +
@@ -391,7 +391,7 @@ plot_avg_rej_true =
   ggplot(aes(x = mu, y = avg_of_rej_estimate, color = mu)) +
   geom_point() +
   labs(
-    title = "Average Estimate of Mu Hat When Null is Rejected vs. the True Value of Mu",
+    title = "Avg. Est. of Mu Hat When Null is Rejected vs. the True Value of Mu",
     x = "True Mu",
     y = "Average Estimate of Mu Hat "
   ) +

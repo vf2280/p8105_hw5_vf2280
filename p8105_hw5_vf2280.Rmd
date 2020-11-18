@@ -279,7 +279,7 @@ output_1 =
 output_1
 ```
 
-Final dataset containing tidy t-test values of simulaitons with specified sample size, mu values, and sigma value.
+Final ouput dataset containing estimate, p-value, and respective mu value of simulations with specified sample size, mu values, and sigma value.
 
 ```{r}
 output = bind_rows(output_0, output_1)
